@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import { Inria_Serif } from "next/font/google";
+import Nav from "./ui/nav";
+
+const inria = Inria_Serif({
+  subsets: ["latin"],
+  variable: "--font-inria-serif",
+  weight: "300"
+});
 
 export const metadata: Metadata = {
   title: "next-frontend-starter",
@@ -14,7 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html className={"h-full antialiased"} lang="en">
-      <body className="flex min-h-full flex-col">
+      <body className={`flex min-h-full flex-col ${inria.className}`}>
+        <Nav />
         <Toaster position="bottom-right" toastOptions={{ duration: 5000 }} />
         {children}
       </body>
