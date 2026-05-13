@@ -53,7 +53,13 @@ export default function ComponentName() {
           />
 
           <InfoCard
-            alerts={[]}
+            alerts={[
+              {
+                title: "Figyelem",
+                description: "A mozgócsiga használata során figyeljen a biztonságra!",
+                color: "red",
+              },
+            ]}
             color="green"
             description="A mozgócsiga egyik vége rögzített, a tárcsa pedig a teherrel együtt mozog. Ez a típus
               felezi a kifejtendő erőt, cserébe viszont kétszer olyan hosszú kötelet kell behúznunk."
