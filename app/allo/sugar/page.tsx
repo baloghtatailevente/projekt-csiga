@@ -13,7 +13,7 @@ export default async function PageWithSearchParams({
   const sugar: number = d/2;
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-blue-200">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <div className="flex w-100 flex-col rounded-full bg-white p-3 shadow-2xl">
         <form className="flex flex-col gap-4 bg-gray-50">
           <p className="text-center text-xl font-semibold">Álló csiga sugarának kiszámítása</p>

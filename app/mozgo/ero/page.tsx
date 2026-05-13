@@ -9,16 +9,16 @@ export default async function PageWithSearchParams({
   searchParams: Promise<SearchParams>;
 }) {
   const p = await searchParams;
-  const G: number = Number(p.G) || 5;
-  const r: number = Number(p.r) || 15;
+  const G: number = Number(p.G) || 10;
+  const r: number = Number(p.r) || 2;
 
-  const ero: number = (G * r) / r;
+  const ero: number = G/2;
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
       <div className="flex w-100 flex-col rounded-full bg-white p-3 shadow-2xl">
         <form className="flex flex-col gap-4 bg-gray-50">
-          <p className="text-center text-xl font-semibold">Álló csigára ható érő kiszámítása</p>
+          <p className="text-center text-xl font-semibold">Mozgó csigára ható érő kiszámítása</p>
           <div>
             <label className="text-xl font-semibold text-blue-500" htmlFor="G">
               G=

@@ -1,5 +1,5 @@
 type SearchParams = {
-  G?: string;
+  F?: string;
   r?: string;
 };
 
@@ -9,25 +9,25 @@ export default async function PageWithSearchParams({
   searchParams: Promise<SearchParams>;
 }) {
   const p = await searchParams;
-  const G: number = Number(p.G) || 5;
-  const r: number = Number(p.r) || 15;
+  const F: number = Number(p.F) || 3;
+  const r: number = Number(p.r) || 5;
 
-  const ero: number = (G * r) / r;
+  const gravitacios: number = F*2;
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
       <div className="flex w-100 flex-col rounded-full bg-white p-3 shadow-2xl">
         <form className="flex flex-col gap-4 bg-gray-50">
-          <p className="text-center text-xl font-semibold">Álló csigára ható érő kiszámítása</p>
+          <p className="text-center text-xl font-semibold">Mozgó csigára ható gravitációs érő kiszámítása</p>
           <div>
             <label className="text-xl font-semibold text-blue-500" htmlFor="G">
-              G=
+              F=
             </label>
             <input
               className="input border-2 border-blue-500 input-primary text-xl"
-              defaultValue={G}
-              id="G"
-              name="G"
+              defaultValue={F}
+              id="F"
+              name="F"
               required
               type="text"
             />
@@ -49,7 +49,7 @@ export default async function PageWithSearchParams({
             <input className="hidden" type="submit" value="Számol" />
           </div>
           <div className="flex justify-around text-xl font-semibold text-blue-500">
-            <p>F={ero.toFixed(2)} N</p>
+            <p>G={gravitacios.toFixed(2)} N</p>
           </div>
         </form>
       </div>

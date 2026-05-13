@@ -25,13 +25,13 @@ export default function AlapokPage() {
     // Logika az irányításhoz
     if (G && r) {
       // Ha G és r megvan -> ero oldal
-      router.push(`/allo/ero?G=${G}&r=${r}`);
+      router.push(`/mozgo/ero?G=${G}&r=${r}`);
     } else if (F && r) {
       // Ha F és r megvan -> gravitacios oldal
-      router.push(`/allo/gravitacios?F=${F}&r=${r}`);
+      router.push(`/mozgo/gravitacios?F=${F}&r=${r}`);
     } else if (d) {
       // Ha csak r van meg -> sugar oldal
-      router.push(`/allo/sugar?r=${d}`);
+      router.push(`/mozgo/sugar?r=${d}`);
     } else {
       alert("Kérlek, töltsd ki a megfelelő mezőket a navigációhoz!");
     }
@@ -40,7 +40,7 @@ export default function AlapokPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4">
       <div className="flex w-full max-w-md flex-col items-center rounded-tr-[50px] bg-gray-50 p-8 shadow-2xl">
-        <h1 className="text-xl font-semibold text-center mb-6">Álló csiga paramétereinek megadása</h1>
+        <h1 className="text-xl font-semibold text-center mb-6">Mozgó csiga paramétereinek megadása</h1>
 
         <form onSubmit={handleNavigation} className="w-full flex flex-col gap-4">
           <div>
