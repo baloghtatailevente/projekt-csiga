@@ -22,6 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html className={"h-full antialiased"} lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+          rel="stylesheet"
+        />
+      </head>
       <body className={`flex min-h-full flex-col ${inria.className} bg-base-200`}>
         <Nav />
         <Toaster position="bottom-right" toastOptions={{ duration: 5000 }} />

@@ -59,7 +59,7 @@ export default function Nav() {
             </ul>
           </div>
           <Link className="btn text-xl btn-ghost" href="/">
-            <Image alt="Logo" height={50} src="/logo.png" width={50} />
+            <Image alt="Logo" height={50} loading="eager" src="/logo.png" width={50} />
             Csiga
           </Link>
         </div>
