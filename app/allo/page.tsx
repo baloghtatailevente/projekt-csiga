@@ -6,9 +6,9 @@ type LinkType = {
 };
 
 const links: LinkType[] = [
-  { href: "/Allo-csiga/ero", label: "F erő" },
-  { href: "/Allo-csiga/gravitacios", label: "G gravitációs erő" },
-  { href: "/Allo-csiga/sugar", label: "Csiga sugara" },
+  { href: "/allo/ero", label: "F erő" },
+  { href: "/allo/gravitacios", label: "G gravitációs erő" },
+  { href: "/allo/sugar", label: "Csiga sugara" },
 ];
 
 export default function AlapokPage() {
