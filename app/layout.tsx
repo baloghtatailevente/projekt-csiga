@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
+import { Inria_Serif } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
-import { Inria_Serif } from "next/font/google";
 import Nav from "./ui/nav";
 
 const inria = Inria_Serif({
   subsets: ["latin"],
   variable: "--font-inria-serif",
-  weight: "300"
+  weight: "300",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className={"h-full antialiased"} lang="en">
-      <body className={`flex min-h-full flex-col ${inria.className}`}>
+      <body className={`flex min-h-full flex-col ${inria.className} bg-base-200`}>
         <Nav />
         <Toaster position="bottom-right" toastOptions={{ duration: 5000 }} />
         {children}
