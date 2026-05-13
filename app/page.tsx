@@ -90,6 +90,22 @@ export default function ComponentName() {
           </div>
         </div>
       </div>
+
+      <div className="mx-auto ms-auto me-auto mt-10 grid w-full max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
+        <a
+          className="btn rounded-2xl bg-fuchsia-600 text-xl text-white hover:bg-fuchsia-800"
+          href="/allo"
+        >
+          Állócsiga kalkulátor
+        </a>
+
+        <a
+          className="btn rounded-2xl bg-green-600 text-xl text-white hover:bg-green-800"
+          href="/mozgo"
+        >
+          Állócsiga kalkulátor
+        </a>
+      </div>
     </>
   );
 }
