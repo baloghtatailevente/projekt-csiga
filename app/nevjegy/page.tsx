@@ -1,7 +1,6 @@
 "use client";
 
 import { Code, Mail } from "lucide-react";
-import React from "react";
 
 // Egy külön kis komponens a kártyának, hogy ne ismételjük magunkat
 const ContactCard = ({ user }) => (
@@ -11,14 +10,14 @@ const ContactCard = ({ user }) => (
     <div className="p-6">
       <div className="mb-6">
         <h1 className="text-2xl font-extrabold tracking-tight text-gray-900">{user.name}</h1>
-        <p className="mt-1 text-xs font-semibold tracking-widest text-blue-600 uppercase">
+        <p className="mt-1 text-xs font-semibold tracking-widest">
           {user.title}
         </p>
       </div>
 
       <div className="space-y-4">
         <div className="group flex items-center">
-          <Mail className="h-4 w-4 text-gray-400 transition-colors group-hover:text-blue-500" />
+          <Mail className="h-4 w-4 text-gray-400 transition-colors" />
           <a
             className="ml-3 text-sm font-medium text-gray-600"
             href={`mailto:${user.email}`}
@@ -31,7 +30,7 @@ const ContactCard = ({ user }) => (
         <br />
 
         <div className="group flex items-center">
-          <Code className="h-4 w-4 text-gray-400 transition-colors group-hover:text-blue-500" />
+          <Code className="h-4 w-4 text-gray-400 transition-colors" />
           <a
             className="ml-3 text-sm font-medium text-gray-600"
             href={user.github}
@@ -48,7 +47,7 @@ const ContactCard = ({ user }) => (
       <span className="text-[10px] font-bold tracking-wider text-gray-400 uppercase">
         {user.id}
       </span>
-      <div className="h-2 w-2 rounded-full bg-green-500" />
+      <div className="h-2 w-2 rounded-full" />
     </div>
   </div>
 );
@@ -62,6 +61,7 @@ const BusinessPage = () => {
       github: "https://github.com/gaal-kristof-zoltan",
       color: "from-cyan-500 to-blue-500",
     },
+
     {
       id: "Főoldal, Számolási Router",
       name: "Balogh-Tatai Levente",
