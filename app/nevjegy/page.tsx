@@ -76,7 +76,6 @@ const BusinessPage = () => {
       <div className="mx-auto max-w-5xl">
         <h1 className="mt-5 mb-5 text-center text-5xl font-semibold">Csapatunk</h1>
 
-        {/* Itt rakjuk őket egymás mellé (flex vagy grid) */}
         <div className="m-4 flex flex-wrap justify-center gap-4">
           {users.map((user) => (
             <ContactCard key={user.id} user={user} />
