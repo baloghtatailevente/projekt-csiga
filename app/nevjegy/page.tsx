@@ -73,7 +73,7 @@ const BusinessPage = () => {
     {
       id: "Főoldal, Számolási Router",
       name: "Balogh-Tatai Levente",
-      title: "Főoldal, Számolási Router",
+      title: "Főoldal, Névjegy oldal",
       email: "baloghtatai.levente@students.jedlik.eu",
       github: "https://github.com/baloghtatailevente",
       color: "from-purple-500 to-pink-500",
