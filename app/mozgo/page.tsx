@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function AlapokPage() {
   const router = useRouter();
-  
+
   // State-ek a bemeneti mezőkhöz
   const [inputs, setInputs] = useState({
     G: "",
     F: "",
     r: "",
-   d: "",
+    d: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +20,7 @@ export default function AlapokPage() {
 
   const handleNavigation = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { G, F, r , d } = inputs;
+    const { G, F, r, d } = inputs;
 
     // Logika az irányításhoz
     if (G && r) {
@@ -40,11 +40,15 @@ export default function AlapokPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4">
       <div className="flex w-full max-w-md flex-col items-center rounded-tr-[50px] bg-gray-50 p-8 shadow-2xl">
-        <h1 className="text-xl font-semibold text-center mb-6">Mozgó csiga paramétereinek megadása</h1>
+        <h1 className="mb-6 text-center text-xl font-semibold">
+          Mozgó csiga paramétereinek megadása
+        </h1>
 
-        <form onSubmit={handleNavigation} className="w-full flex flex-col gap-4">
+        <form onSubmit={handleNavigation} className="flex w-full flex-col gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-600">G (Gravitációs állandó / Súly):</label>
+            <label className="block text-sm font-medium text-gray-600">
+              G (Gravitációs állandó / Súly):
+            </label>
             <input
               type="number"
               name="G"
@@ -79,7 +83,7 @@ export default function AlapokPage() {
             />
           </div>
 
-             <div>
+          <div>
             <label className="block text-sm font-medium text-gray-600">d (Átmérő):</label>
             <input
               type="number"
@@ -93,7 +97,7 @@ export default function AlapokPage() {
 
           <button
             type="submit"
-            className="mt-4 w-full bg-blue-500 text-white font-bold py-3 rounded-full hover:bg-blue-600 transition-transform active:scale-95"
+            className="mt-4 w-full rounded-full bg-blue-500 py-3 font-bold text-white transition-transform hover:bg-blue-600 active:scale-95"
           >
             Számítás és Navigáció
           </button>

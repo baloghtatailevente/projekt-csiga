@@ -2,17 +2,24 @@
 
 import { Code, Mail } from "lucide-react";
 
+interface User {
+  id: string;
+  name: string;
+  title: string;
+  email: string;
+  github: string;
+  color: string;
+}
+
 // Egy külön kis komponens a kártyának, hogy ne ismételjük magunkat
-const ContactCard = ({ user }) => (
+const ContactCard = ({ user }: { user: User }) => (
   <div className="w-full max-w-sm overflow-hidden rounded-2xl border border-gray-200 bg-white p-4 shadow-xl transition-all hover:shadow-2xl">
     <div className={`h-2 bg-gradient-to-r ${user.color}`} />
 
     <div className="p-6">
       <div className="mb-6">
         <h1 className="text-2xl font-extrabold tracking-tight text-gray-900">{user.name}</h1>
-        <p className="mt-1 text-xs font-semibold tracking-widest">
-          {user.title}
-        </p>
+        <p className="mt-1 text-xs font-semibold tracking-widest">{user.title}</p>
       </div>
 
       <div className="space-y-4">
@@ -57,6 +64,7 @@ const BusinessPage = () => {
     {
       id: "Számolási Logikák",
       name: "Gaál Kristóf Zoltán",
+      title: "Számolási Logikák",
       email: "gaal.kristof.zoltan@students.jedlik.eu",
       github: "https://github.com/gaal-kristof-zoltan",
       color: "from-cyan-500 to-blue-500",
@@ -65,6 +73,7 @@ const BusinessPage = () => {
     {
       id: "Főoldal, Számolási Router",
       name: "Balogh-Tatai Levente",
+      title: "Főoldal, Számolási Router",
       email: "baloghtatai.levente@students.jedlik.eu",
       github: "https://github.com/baloghtatailevente",
       color: "from-purple-500 to-pink-500",
