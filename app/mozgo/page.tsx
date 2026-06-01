@@ -14,11 +14,11 @@ export default function AlapokPage() {
    d: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
 
-  const handleNavigation = (e) => {
+  const handleNavigation = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { G, F, r , d } = inputs;
 
