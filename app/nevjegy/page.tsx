@@ -19,9 +19,7 @@ const ContactCard = ({ user }: { user: User }) => (
     <div className="p-6">
       <div className="mb-6">
         <h1 className="text-2xl font-extrabold tracking-tight text-gray-900">{user.name}</h1>
-        <p className="mt-1 text-xs font-semibold tracking-widest">
-          {user.title}
-        </p>
+        <p className="mt-1 text-xs font-semibold tracking-widest">{user.title}</p>
       </div>
 
       <div className="space-y-4">
